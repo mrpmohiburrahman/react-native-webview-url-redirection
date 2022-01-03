@@ -18,8 +18,8 @@ const App = () => {
           ref={webRef}
           source={{ uri: "https://www.wikipedia.org/" }}
           style={{ width: "100%", height: "100%" }}
-          onNavigationStateChange={(e) => {
-            const { url } = e;
+          onNavigationStateChange={(navState) => {
+            const { url } = navState;
             if (url.includes("https://www.wikipedia.org/")) {
               const newURL =
                 "https://www.google.com/search?client=firefox-b-d&q=react+native";
